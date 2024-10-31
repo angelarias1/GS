@@ -1,0 +1,65 @@
+/* Estilos generales */
+:root {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Texto en color oscuro */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #333; /* Texto en color oscuro */
+  background-color: #ffffff; /* Fondo blanco */
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+h1, h2, p {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Estilo de enlaces */
+a {
+  font-weight: 500;
+  color: #007BFF; /* Azul para enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3; /* Azul oscuro en hover */
+}
+
+/* Botones */
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #007BFF; /* Azul para el fondo del botón */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul oscuro en hover */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  h1, h2, p {
+    font-size: 1em;
+  }
+}
