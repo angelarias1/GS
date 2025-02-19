@@ -1,0 +1,137 @@
+.productos {
+    width: 100%;
+    padding: 60px 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.productos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.productos-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.productos-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estructura de los productos */
+.producto-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Alternar la posición de la imagen y el texto */
+.producto-item.invertido {
+    flex-direction: row-reverse;
+}
+
+.producto-texto {
+    flex: 1;
+    text-align: left;
+    max-width: 40%;
+}
+
+.producto-texto h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.producto-texto p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Lista de detalles */
+.producto-detalles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.producto-detalles li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del botón Azul */
+.producto-boton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #007bff; /* Azul sólido */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.producto-boton:hover {
+    background: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.05);
+}
+
+/* Imagen con sombra flotante */
+.producto-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.producto-imagen img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.producto-item:hover .producto-imagen img {
+    transform: scale(1.05);
+    filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+    .producto-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .producto-texto {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .producto-boton {
+        display: inline-block;
+    }
+
+    .producto-imagen {
+        max-width: 80%;
+    }
+}

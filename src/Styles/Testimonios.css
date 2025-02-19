@@ -1,0 +1,82 @@
+.testimonios {
+    width: 100%;
+    padding: 80px 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonios-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.testimonios-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GRID DE TESTIMONIOS */
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.testimonio-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.testimonio-stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.testimonio-text {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonio-nombre {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: bold;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 900px) {
+    .testimonios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonios-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

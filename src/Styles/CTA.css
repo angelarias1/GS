@@ -1,0 +1,94 @@
+.cta {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Fondo oscuro para mejor visibilidad del texto */
+.cta-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+/* BOTONES */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Botón de WhatsApp */
+.whatsapp {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.whatsapp:hover {
+    background: #1EBE5D;
+}
+
+/* Botón de Cotización */
+.secondary {
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ffffff;
+}
+
+.secondary:hover {
+    background: #f1f1f1;
+    color: #000;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 600px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}

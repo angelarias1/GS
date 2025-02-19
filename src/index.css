@@ -1,65 +1,36 @@
-/* Estilos generales */
-:root {
-  font-family: 'Arial', sans-serif;
-  color: #333; /* Texto en color oscuro */
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Importar DM Sans desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
-body {
+/* Reset de estilos básicos */
+* {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
-  color: #333; /* Texto en color oscuro */
-  background-color: #ffffff; /* Fondo blanco */
-  font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Evita el scroll horizontal */
+  box-sizing: border-box;
 }
 
-h1, h2, p {
-  text-align: center;
-  margin: 0;
-  padding: 10px;
+/* Estilos generales */
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: black;
+  background-color: #eeeeee;
 }
 
-/* Estilo de enlaces */
+/* Enlaces */
 a {
-  font-weight: 500;
-  color: #007BFF; /* Azul para enlaces */
   text-decoration: none;
-}
-
-a:hover {
-  color: #0056b3; /* Azul oscuro en hover */
+  color: inherit;
 }
 
 /* Botones */
 button {
-  border-radius: 5px;
-  border: 1px solid transparent;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  font-weight: 500;
-  background-color: #007BFF; /* Azul para el fondo del botón */
-  color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.25s;
+  border: none;
+  background: none;
 }
 
-button:hover {
-  background-color: #0056b3; /* Azul oscuro en hover */
-}
-
-button:focus,
-button:focus-visible {
-  outline: 2px solid #0056b3;
-}
-
-/* Responsividad */
+/* Responsividad básica */
 @media (max-width: 768px) {
-  h1, h2, p {
-    font-size: 1em;
+  body {
+    font-size: 14px;
   }
 }

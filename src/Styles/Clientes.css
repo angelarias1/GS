@@ -1,0 +1,116 @@
+.clientes {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    text-align: center;
+  }
+  
+  .clientes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .clientes-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .clientes-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  
+  /* Estilo del carrusel */
+  .clientes-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .clientes-slide-track {
+    display: flex;
+    gap: 40px;
+    width: calc(150px * 10);
+  }
+  
+  .clientes-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    padding: 10px;
+  }
+  
+  .clientes-slide img {
+    max-width: 120px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+  }
+  
+  .clientes-slide img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+  
+  /* Animación primera fila (movimiento a la derecha) */
+  .clientes-slider-derecha .clientes-slide-track {
+    animation: slideRight 10s linear infinite;
+  }
+  
+  /* Animación segunda fila (movimiento a la izquierda) */
+  .clientes-slider-izquierda .clientes-slide-track {
+    animation: slideLeft 10s linear infinite;
+  }
+  
+  /* Animaciones */
+  @keyframes slideRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .clientes-slide img {
+      max-width: 90px;
+    }
+  
+    .clientes-slide-track {
+      animation-duration: 14s;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .clientes-title {
+      font-size: 2rem;
+    }
+  
+    .clientes-subtitle {
+      font-size: 1rem;
+    }
+  
+    .clientes-slide img {
+      max-width: 80px;
+    }
+  }
+  

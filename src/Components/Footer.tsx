@@ -1,34 +1,50 @@
-// Footer.tsx
 import React from 'react';
 import '../Styles/Footer.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP } from 'react-icons/fa';
+import LogoImg from '../assets/images/Saom.png'; // Logo
 
 const Footer: React.FC = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-content">
-        <h2 className="footer-title">Inspirado en Vincent van Gogh</h2>
-        <p className="footer-text">
-          Un homenaje a la vida y el arte de Van Gogh.
-        </p>
-        <div className="social-icons">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-            <FaPinterestP />
-          </a>
-        </div>
-      </div>
-      <p className="footer-credits">© 2024 Inspirado en Van Gogh. Todos los derechos reservados.</p>
-    </footer>
-  );
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+                {/* COLUMNA IZQUIERDA - LOGO Y DESCRIPCIÓN */}
+                <div className="footer-brand">
+                    <img src={LogoImg} alt="Grupo SAOM Logo" className="footer-logo" />
+                    <p className="footer-description">
+                        Seguridad y videovigilancia con tecnología avanzada. Protegemos lo que más importa.
+                    </p>
+                </div>
+
+                {/* COLUMNA CENTRAL - ENLACES RÁPIDOS */}
+                <div className="footer-links">
+                    <h3>Enlaces</h3>
+                    <a href="#about">Nosotros</a>
+                    <a href="#services">Servicios</a>
+                    <a href="#testimonios">Testimonios</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+
+                {/* COLUMNA DERECHA - CONTACTO */}
+                <div className="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>📍 Cancún, Quintana Roo</p>
+                    <p>📧 ventas@gruposaom.com.mx</p>
+                    <p>📞 +52 998 914 8930</p>
+                </div>
+            </div>
+
+            {/* REDES SOCIALES */}
+            <div className="footer-social">
+                <a href="#"><i className="fa fa-instagram"></i></a>
+                <a href="#"><i className="fa fa-facebook"></i></a>
+                <a href="#"><i className="fa fa-linkedin"></i></a>
+            </div>
+
+            {/* COPYRIGHT */}
+            <div className="footer-bottom">
+                <p>© {new Date().getFullYear()} Grupo SAOM. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
