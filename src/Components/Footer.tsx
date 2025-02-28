@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Footer.css';
-import LogoImg from '../assets/images/Saom.png'; // Logo
+import LogoImg from '../assets/images/image.webp'; // Logo
 
 const Footer: React.FC = () => {
     return (
@@ -14,13 +14,25 @@ const Footer: React.FC = () => {
                     </p>
                 </div>
 
-                {/* COLUMNA CENTRAL - ENLACES RÁPIDOS */}
+                {/* COLUMNA CENTRAL - ENLACES RÁPIDOS EN DOS COLUMNAS */}
                 <div className="footer-links">
                     <h3>Enlaces</h3>
-                    <a href="#about">Nosotros</a>
-                    <a href="#services">Servicios</a>
-                    <a href="#testimonios">Testimonios</a>
-                    <a href="#contact">Contacto</a>
+                    <div className="footer-links-columns">
+                        <div className="footer-links-column">
+                            <a href="#beneficios">Beneficios</a>
+                            <a href="#sectores">Sectores</a>
+                            <a href="#clientes">Clientes</a>
+                            <a href="#productos">Productos</a>
+                            <a href="#cta">Contacto Rápido</a>
+                        </div>
+                        <div className="footer-links-column">
+                            <a href="#estadisticas">Estadísticas</a>
+                            <a href="#testimonios">Testimonios</a>
+                            <a href="#partners">Partners</a>
+                            <a href="#faq">Preguntas Frecuentes</a>
+                            <a href="#contacto">Contacto</a>
+                        </div>
+                    </div>
                 </div>
 
                 {/* COLUMNA DERECHA - CONTACTO */}

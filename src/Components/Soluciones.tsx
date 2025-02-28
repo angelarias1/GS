@@ -2,9 +2,9 @@ import React from 'react';
 import '../Styles/Soluciones.css';
 
 // Imágenes de las soluciones
-import hogarImg from '../assets/images/imagen.jpg';
-import negocioImg from '../assets/images/imagen.jpg';
-import industrialImg from '../assets/images/imagen.jpg';
+import hogarImg from '../assets/images/seguridadd.webp';
+import negocioImg from '../assets/images/proteccion.webp';
+import industrialImg from '../assets/images/industrial.webp';
 
 const Soluciones: React.FC = () => {
     return (

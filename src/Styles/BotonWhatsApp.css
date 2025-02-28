@@ -1,0 +1,68 @@
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .boton-whatsapp img {
+    width: 35px;
+    height: 35px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+  }
+  
+  .boton-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Tooltip */
+  .tooltip-text {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .boton-whatsapp:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-5px);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .boton-whatsapp {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .boton-whatsapp img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .tooltip-text {
+      font-size: 12px;
+      bottom: 70px;
+    }
+  }
+  

@@ -1,0 +1,123 @@
+/* =============================== */
+/* SECCIÓN ESTADÍSTICAS MEJORADA */
+/* =============================== */
+
+.estadisticas {
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Contenedor */
+.estadisticas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =============================== */
+/* TEXTOS */
+/* =============================== */
+
+.estadisticas-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.estadisticas-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* =============================== */
+/* GRID DE ESTADÍSTICAS */
+/* =============================== */
+
+.estadisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+/* =============================== */
+/* TARJETAS INDIVIDUALES */
+/* =============================== */
+
+.estadistica-item {
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animación de aparición */
+.estadistica-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================== */
+/* NÚMEROS */
+/* =============================== */
+
+.estadistica-numero {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #004aad;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover en números */
+.estadistica-item:hover .estadistica-numero {
+  transform: scale(1.1);
+  color: #002e72;
+}
+
+/* =============================== */
+/* DESCRIPCIÓN */
+/* =============================== */
+
+.estadistica-descripcion {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* =============================== */
+/* RESPONSIVIDAD */
+/* =============================== */
+
+@media (max-width: 900px) {
+  .estadisticas-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .estadisticas-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .estadistica-numero {
+      font-size: 2.8rem;
+  }
+
+  .estadistica-descripcion {
+      font-size: 1rem;
+  }
+}

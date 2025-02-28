@@ -1,20 +1,43 @@
+/* =============================== */
+/* SECCIÓN FAQ MEJORADA */
+/* =============================== */
+
 .faq {
     width: 100%;
     padding: 80px 5%;
-    background: #ffffff;
+    background: #f9f9f9;
     text-align: center;
 }
 
+/* Contenedor */
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* =============================== */
+/* TITULOS */
+/* =============================== */
 
 .faq-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #222;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.faq-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #004aad;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .faq-subtitle {
@@ -22,27 +45,40 @@
     font-weight: 400;
     color: #555;
     margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
+/* =============================== */
 /* LISTA DE PREGUNTAS */
+/* =============================== */
+
 .faq-list {
     text-align: left;
 }
 
+/* Tarjetas de Preguntas */
 .faq-item {
-    background: #f9f9f9;
-    padding: 15px;
+    background: #ffffff;
+    padding: 18px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .faq-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
+/* =============================== */
+/* PREGUNTA Y ICONO */
+/* =============================== */
 
 .faq-question {
     display: flex;
@@ -50,31 +86,51 @@
     align-items: center;
 }
 
+/* Estilo del texto de la pregunta */
 .faq-question h3 {
     font-size: 1.2rem;
     color: #222;
     margin: 0;
+    flex: 1;
 }
 
+/* Icono de expansión */
 .faq-icon {
     font-size: 1.5rem;
-    color: #fa3636;
+    color: #004aad;
     font-weight: bold;
+    transition: transform 0.3s ease;
 }
+
+/* Gira el ícono al abrir */
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* =============================== */
+/* RESPUESTA - EFECTO DE APERTURA */
+/* =============================== */
 
 .faq-answer {
     font-size: 1rem;
     color: #555;
     margin-top: 10px;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
 }
 
-/* Mostrar respuesta cuando está activa */
+/* Aparece cuando está activa */
 .faq-item.active .faq-answer {
-    display: block;
+    max-height: 200px;
+    opacity: 1;
 }
 
+/* =============================== */
 /* RESPONSIVIDAD */
+/* =============================== */
+
 @media (max-width: 600px) {
     .faq-title {
         font-size: 2rem;

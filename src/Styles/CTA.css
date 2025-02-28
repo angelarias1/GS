@@ -1,6 +1,10 @@
+/* =============================== */
+/* SECCIÓN CTA MEJORADA */
+/* =============================== */
+
 .cta {
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -10,11 +14,11 @@
     text-align: center;
 }
 
-/* Fondo oscuro para mejor visibilidad del texto */
+/* Capa oscura para mejorar visibilidad del texto */
 .cta-overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,73 +26,94 @@
     padding: 20px;
 }
 
+/* =============================== */
+/* TEXTOS */
+/* =============================== */
+
 .cta-title {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #f1f1f1;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    max-width: 700px;
+    line-height: 1.5;
 }
 
+/* =============================== */
 /* BOTONES */
+/* =============================== */
+
 .cta-buttons {
     display: flex;
     gap: 20px;
 }
 
 .cta-button {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border-radius: 25px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    text-align: center;
 }
 
 /* Botón de WhatsApp */
 .whatsapp {
     background: #25D366;
     color: #ffffff;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
 }
 
 .whatsapp:hover {
     background: #1EBE5D;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+    transform: scale(1.05);
 }
 
 /* Botón de Cotización */
 .secondary {
     background: #ffffff;
     color: #333;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .secondary:hover {
     background: #f1f1f1;
     color: #000;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
 
+/* =============================== */
 /* RESPONSIVIDAD */
-@media (max-width: 600px) {
+/* =============================== */
+
+@media (max-width: 768px) {
     .cta-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .cta-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .cta-buttons {
         flex-direction: column;
+        gap: 15px;
     }
 
     .cta-button {
         width: 100%;
-        text-align: center;
     }
 }

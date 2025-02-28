@@ -1,11 +1,16 @@
+/* =============================== */
+/* SECCIÓN FOOTER MEJORADA */
+/* =============================== */
+
 .footer {
   width: 100%;
-  background: #0279da;
+  background: #004aad;
   color: #ffffff;
   padding: 50px 5%;
   text-align: center;
 }
 
+/* CONTENEDOR PRINCIPAL */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -15,7 +20,10 @@
   gap: 20px;
 }
 
+/* =============================== */
 /* COLUMNA IZQUIERDA - LOGO Y DESCRIPCIÓN */
+/* =============================== */
+
 .footer-brand {
   flex: 1;
   text-align: left;
@@ -32,7 +40,10 @@
   max-width: 250px;
 }
 
-/* COLUMNA CENTRAL - ENLACES */
+/* =============================== */
+/* COLUMNA CENTRAL - ENLACES EN DOS COLUMNAS */
+/* =============================== */
+
 .footer-links {
   flex: 1;
   text-align: left;
@@ -43,10 +54,21 @@
   margin-bottom: 10px;
 }
 
+/* Dos columnas de enlaces */
+.footer-links-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlaces */
 .footer-links a {
-  display: block;
   color: #ffffff;
-;
   text-decoration: none;
   font-size: 1rem;
   margin-bottom: 8px;
@@ -57,7 +79,10 @@
   color: #fa3636;
 }
 
+/* =============================== */
 /* COLUMNA DERECHA - CONTACTO */
+/* =============================== */
+
 .footer-contact {
   flex: 1;
   text-align: left;
@@ -71,11 +96,13 @@
 .footer-contact p {
   font-size: 1rem;
   color: #ffffff;
-;
   margin-bottom: 5px;
 }
 
+/* =============================== */
 /* REDES SOCIALES */
+/* =============================== */
+
 .footer-social {
   margin-top: 20px;
 }
@@ -91,15 +118,20 @@
   color: #ff0000;
 }
 
+/* =============================== */
 /* COPYRIGHT */
+/* =============================== */
+
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #ffffff;
-;
 }
 
+/* =============================== */
 /* RESPONSIVIDAD */
+/* =============================== */
+
 @media (max-width: 900px) {
   .footer-container {
       flex-direction: column;
@@ -108,5 +140,10 @@
 
   .footer-brand, .footer-links, .footer-contact {
       text-align: center;
+  }
+
+  .footer-links-columns {
+      flex-direction: column;
+      align-items: center;
   }
 }

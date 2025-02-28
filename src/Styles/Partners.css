@@ -1,0 +1,180 @@
+/* =============================== */
+/* SECCIÓN PARTNERS MEJORADA */
+/* =============================== */
+
+.partners {
+  padding: 80px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Contenedor */
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =============================== */
+/* TITULOS */
+/* =============================== */
+
+.partners-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.partners-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #004aad;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.partners-subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* =============================== */
+/* CARRUSEL */
+/* =============================== */
+
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 0;
+}
+
+/* Pista de logos */
+.partners-slide-track {
+  display: flex;
+  gap: 40px;
+  width: calc(150px * 10);
+}
+
+/* Tarjetas de los logos */
+.partners-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  padding: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* =============================== */
+/* EFECTOS VISUALES */
+/* =============================== */
+
+/* 🎨 Efecto de logos más vibrantes */
+.partners-slide img {
+  max-width: 120px;
+  filter: brightness(1.2) saturate(1.5);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 🔥 Efecto Hover: Resalta el logo seleccionado */
+.partners-slide:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.5) saturate(1.8);
+}
+
+/* 💨 Efecto de desenfoque en los lados */
+.partners-slider::before,
+.partners-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.partners-slider::before {
+  left: 0;
+}
+
+.partners-slider::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* =============================== */
+/* ANIMACIONES */
+/* =============================== */
+
+/* 🎥 Movimiento de derecha a izquierda */
+.partners-slider-derecha .partners-slide-track {
+  animation: slideRight 12s linear infinite;
+}
+
+/* 🎥 Movimiento de izquierda a derecha */
+.partners-slider-izquierda .partners-slide-track {
+  animation: slideLeft 12s linear infinite;
+}
+
+/* 🚀 Ajustando la velocidad para que se vea más fluido */
+@keyframes slideRight {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+      transform: translateX(-50%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+/* =============================== */
+/* RESPONSIVIDAD */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .partners-slide img {
+      max-width: 90px;
+  }
+
+  .partners-slide-track {
+      animation-duration: 16s;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-title {
+      font-size: 2rem;
+  }
+
+  .partners-subtitle {
+      font-size: 1rem;
+  }
+
+  .partners-slide img {
+      max-width: 80px;
+  }
+}

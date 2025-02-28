@@ -1,42 +1,60 @@
-import React from 'react';
-import '../Styles/Beneficios.css';
-import imagen from '../assets/images/imagen.jpg'; // Importa la imagen genérica
+import React from "react";
+import "../Styles/Clientes.css";
 
-const Beneficios: React.FC = () => {
-    return (
-        <section className="beneficios">
-            <div className="beneficios-container">
-                <h2 className="beneficios-title">¿Por qué elegir nuestro sistema de videovigilancia?</h2>
-                <p className="beneficios-subtitle">Protege tu hogar y negocio con tecnología avanzada.</p>
+// Importa los logos de las empresas
+import logo1 from '../assets/images/aguakan.webp';
+import logo2 from '../assets/images/api.webp';
+import logo3 from '../assets/images/dolfin.webp';
+import logo4 from '../assets/images/barcelo.webp';
+import logo5 from '../assets/images/cadu.webp';
+import logo6 from '../assets/images/cfe.webp';
+import logo7 from '../assets/images/ciudad.webp';
+import logo8 from '../assets/images/cumbres.webp';
+import logo9 from '../assets/images/lomas-.webp';
+import logo10 from '../assets/images/walmart.webp';
+import logo11 from '../assets/images/westin.webp';
+import logo12 from '../assets/images/fair.webp';
+import logo13 from '../assets/images/grand.webp';
+import logo14 from '../assets/images/maroma.webp';
+import logo15 from '../assets/images/xcaret.webp';
+import logo16 from '../assets/images/yza.webp';
 
-                <div className="beneficios-grid">
-                    <div className="beneficio-card">
-                        <img src={imagen} alt="Seguridad 24/7" />
-                        <h3>Seguridad 24/7</h3>
-                        <p>Monitorea en tiempo real desde cualquier lugar con acceso remoto.</p>
-                    </div>
+const logosFila1 = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
+const logosFila2 = [logo9, logo10, logo11, logo12, logo13, logo14, logo15, logo16];
 
-                    <div className="beneficio-card">
-                        <img src={imagen} alt="Inteligencia Artificial" />
-                        <h3>Detección Inteligente</h3>
-                        <p>Nuestras cámaras identifican movimientos sospechosos y alertan en segundos.</p>
-                    </div>
+const Clientes: React.FC = () => {
+  return (
+    <section className="clientes" id="clientes">
+      <div className="clientes-container">
+        <h2 className="clientes-title">Nuestros Clientes Satisfechos</h2>
+        <p className="clientes-subtitle">
+          Empresas que confían en nuestra tecnología para su seguridad.
+        </p>
 
-                    <div className="beneficio-card">
-                        <img src={imagen} alt="Grabación en la nube" />
-                        <h3>Grabación en la Nube</h3>
-                        <p>Accede a tus videos almacenados con alta seguridad y protección.</p>
-                    </div>
+        {/* Primera fila (movimiento a la derecha) */}
+        <div className="clientes-slider clientes-slider-derecha">
+          <div className="clientes-slide-track">
+            {logosFila1.concat(logosFila1).map((logo, index) => (
+              <div key={index} className="clientes-slide">
+                <img src={logo} alt={`Cliente ${index + 1}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
 
-                    <div className="beneficio-card">
-                        <img src={imagen} alt="Fácil instalación" />
-                        <h3>Fácil Instalación</h3>
-                        <p>Instalación profesional sin complicaciones y configuración rápida.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+        {/* Segunda fila (movimiento a la izquierda) */}
+        <div className="clientes-slider clientes-slider-izquierda">
+          <div className="clientes-slide-track">
+            {logosFila2.concat(logosFila2).map((logo, index) => (
+              <div key={index} className="clientes-slide">
+                <img src={logo} alt={`Cliente ${index + 9}`} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default Beneficios;
+export default Clientes;

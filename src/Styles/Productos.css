@@ -75,11 +75,11 @@
     align-items: center;
 }
 
-/* Estilos del botón Azul */
+/* Botón Azul */
 .producto-boton {
     margin-top: 10px;
     padding: 8px 16px;
-    background: #007bff; /* Azul sólido */
+    background: #007bff;
     color: white;
     border: none;
     border-radius: 6px;
@@ -90,7 +90,7 @@
 }
 
 .producto-boton:hover {
-    background: #0056b3; /* Azul más oscuro en hover */
+    background: #0056b3;
     transform: scale(1.05);
 }
 
@@ -115,7 +115,48 @@
     filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.2));
 }
 
-/* Responsividad */
+/* ===================== NUEVA SECCIÓN: TIPOS DE CÁMARAS ===================== */
+.tipos-camaras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tipo-camara-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tipo-camara-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tipo-camara-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+.tipo-camara-nombre {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #222;
+}
+
+.tipo-camara-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* RESPONSIVIDAD */
 @media (max-width: 900px) {
     .producto-item {
         flex-direction: column !important;
@@ -133,5 +174,15 @@
 
     .producto-imagen {
         max-width: 80%;
+    }
+
+    .tipos-camaras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tipos-camaras-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
