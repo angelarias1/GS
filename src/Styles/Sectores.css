@@ -55,6 +55,7 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* IMAGEN DE FONDO */
@@ -114,7 +115,26 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* =============================== */
+/* EFECTO FADE-IN ANIMACIÓN */
+/* =============================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =============================== */
 /* RESPONSIVIDAD */
+/* =============================== */
+
+/* TABLETS */
 @media (max-width: 900px) {
     .sectores-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -125,6 +145,7 @@
     }
 }
 
+/* CELULARES */
 @media (max-width: 600px) {
     .sectores-grid {
         grid-template-columns: repeat(1, 1fr);

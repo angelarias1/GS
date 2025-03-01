@@ -3,7 +3,7 @@
 /* =============================== */
 
 .estadisticas {
-  padding: 80px 5%;
+  padding: 100px 5%;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -19,22 +19,23 @@
 /* =============================== */
 
 .estadisticas-title {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* 🔹 Más separación debajo del título */
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
 .estadisticas-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 60px; /* 🔹 Más separación debajo del subtítulo */
   max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 /* =============================== */
@@ -44,7 +45,7 @@
 .estadisticas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 40px; /* 🔹 Aumentado para más espacio entre tarjetas */
   text-align: center;
 }
 
@@ -53,16 +54,16 @@
 /* =============================== */
 
 .estadistica-item {
-  padding: 25px;
+  padding: 35px; /* 🔹 Más espacio dentro de cada tarjeta */
   background: white;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(10px);
+  opacity: 0.85;
 }
 
-/* Animación de aparición */
+/* Animación de aparición más fluida */
 .estadistica-item.show {
   opacity: 1;
   transform: translateY(0);
@@ -73,16 +74,16 @@
 /* =============================== */
 
 .estadistica-numero {
-  font-size: 3.5rem;
+  font-size: 3.7rem; /* 🔹 Aumentado para mejor impacto */
   font-weight: bold;
   color: #004aad;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
+  margin-bottom: 15px; /* 🔹 Más separación entre número y descripción */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Hover en números */
 .estadistica-item:hover .estadistica-numero {
-  transform: scale(1.1);
+  transform: scale(1.08);
   color: #002e72;
 }
 
@@ -105,6 +106,7 @@
 @media (max-width: 900px) {
   .estadisticas-grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 30px; /* 🔹 Espacio ajustado en tabletas */
   }
 }
 
@@ -114,7 +116,7 @@
   }
 
   .estadistica-numero {
-      font-size: 2.8rem;
+      font-size: 3rem;
   }
 
   .estadistica-descripcion {

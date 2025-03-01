@@ -5,8 +5,8 @@
 .cta {
     width: 100%;
     height: 350px;
-    background-size: cover;
-    background-position: center;
+    background: url('../assets/images/camara.webp') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax */
     position: relative;
     display: flex;
     align-items: center;
@@ -71,12 +71,12 @@
 .whatsapp {
     background: #25D366;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp:hover {
     background: #1EBE5D;
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
     transform: scale(1.05);
 }
 
@@ -85,13 +85,13 @@
     background: #ffffff;
     color: #333;
     border: 2px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
 }
 
 .secondary:hover {
     background: #f1f1f1;
     color: #000;
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
 

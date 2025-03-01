@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
             <div className="footer-container">
                 {/* COLUMNA IZQUIERDA - LOGO Y DESCRIPCIÓN */}
                 <div className="footer-brand">
-                    <img src={LogoImg} alt="Grupo SAOM Logo" className="footer-logo" />
+                    <img src={LogoImg} alt="Grupo SAOM - Seguridad y Videovigilancia" className="footer-logo" />
                     <p className="footer-description">
                         Seguridad y videovigilancia con tecnología avanzada. Protegemos lo que más importa.
                     </p>
@@ -39,16 +39,22 @@ const Footer: React.FC = () => {
                 <div className="footer-contact">
                     <h3>Contacto</h3>
                     <p>📍 Cancún, Quintana Roo</p>
-                    <p>📧 ventas@gruposaom.com.mx</p>
-                    <p>📞 +52 998 914 8930</p>
+                    <p>📧 <a href="mailto:ventas@gruposaom.com.mx">ventas@gruposaom.com.mx</a></p>
+                    <p>📞 <a href="tel:+529989148930">+52 998 914 8930</a></p>
                 </div>
             </div>
 
             {/* REDES SOCIALES */}
             <div className="footer-social">
-                <a href="#"><i className="fa fa-instagram"></i></a>
-                <a href="#"><i className="fa fa-facebook"></i></a>
-                <a href="#"><i className="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-linkedin"></i>
+                </a>
             </div>
 
             {/* COPYRIGHT */}

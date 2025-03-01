@@ -4,7 +4,7 @@
 
 .faq {
     width: 100%;
-    padding: 80px 5%;
+    padding: 100px 5%;
     background: #f9f9f9;
     text-align: center;
 }
@@ -16,14 +16,14 @@
 }
 
 /* =============================== */
-/* TITULOS */
+/* TÍTULOS */
 /* =============================== */
 
 .faq-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     position: relative;
 }
@@ -44,7 +44,7 @@
     font-size: 1.3rem;
     font-weight: 400;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -62,18 +62,19 @@
 /* Tarjetas de Preguntas */
 .faq-item {
     background: #ffffff;
-    padding: 18px;
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     cursor: pointer;
     overflow: hidden;
+    border-left: 5px solid #004aad;
 }
 
 .faq-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* =============================== */
@@ -88,15 +89,16 @@
 
 /* Estilo del texto de la pregunta */
 .faq-question h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #222;
     margin: 0;
     flex: 1;
+    font-weight: bold;
 }
 
 /* Icono de expansión */
 .faq-icon {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #004aad;
     font-weight: bold;
     transition: transform 0.3s ease;
@@ -112,13 +114,14 @@
 /* =============================== */
 
 .faq-answer {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
-    margin-top: 10px;
+    margin-top: 12px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.3s ease;
+    padding-left: 5px;
 }
 
 /* Aparece cuando está activa */
@@ -142,5 +145,9 @@
 
     .faq-question h3 {
         font-size: 1rem;
+    }
+
+    .faq-icon {
+        font-size: 1.5rem;
     }
 }

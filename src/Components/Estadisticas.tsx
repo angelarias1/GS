@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/Estadisticas.css";
 
-// Lista de estadísticas
+// Lista de estadísticas con palabras clave optimizadas
 const estadisticas = [
   { numero: "2000", descripcion: "Clientes Satisfechos" },
-  { numero: "35", descripcion: "Años de Experiencia" },
+  { numero: "35", descripcion: "Años de Experiencia en Seguridad" },
   { numero: "15", descripcion: "Proyectos en Curso" },
-  { numero: "500", descripcion: "Proyectos Concluidos" },
+  { numero: "500", descripcion: "Proyectos Concluidos con Éxito" },
 ];
 
 const Estadisticas: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Detectar scroll para mostrar animaciones
+    // Detectar scroll para activar animaciones
     useEffect(() => {
         const handleScroll = () => {
             const section = document.querySelector(".estadisticas-grid");
@@ -30,16 +30,16 @@ const Estadisticas: React.FC = () => {
     }, []);
 
     return (
-        <section className="estadisticas" id="estadisticas">
+        <section className="estadisticas" id="estadisticas" aria-label="Resultados y Experiencia en Videovigilancia">
             <div className="estadisticas-container">
-                <h2 className="estadisticas-title">Resultados que nos respaldan</h2>
+                <h2 className="estadisticas-title">Resultados que nos Respaldan</h2>
                 <p className="estadisticas-subtitle">
-                    Nuestra experiencia y compromiso nos han permitido lograr grandes resultados en el sector de videovigilancia.
+                    Con más de 35 años de experiencia, hemos asegurado hogares y negocios con tecnología avanzada.
                 </p>
 
                 <div className="estadisticas-grid">
                     {estadisticas.map((item, index) => (
-                        <div key={index} className={`estadistica-item ${isVisible ? "show" : ""}`}>
+                        <div key={index} className={`estadistica-item ${isVisible ? "show" : ""}`} role="presentation">
                             <h2 className="estadistica-numero">{item.numero}</h2>
                             <p className="estadistica-descripcion">{item.descripcion}</p>
                         </div>

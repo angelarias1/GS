@@ -4,7 +4,7 @@
 
 .testimonios {
     width: 100%;
-    padding: 80px 5%;
+    padding: 100px 5%;
     background: #f9f9f9;
     text-align: center;
 }
@@ -20,21 +20,22 @@
 /* =============================== */
 
 .testimonios-title {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 15px;
+    margin-bottom: 25px; /* 🔹 Más separación debajo del título */
+    text-transform: uppercase;
 }
 
 .testimonios-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* 🔹 Más separación debajo del subtítulo */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* =============================== */
@@ -44,7 +45,7 @@
 .testimonios-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px; /* 🔹 Mayor separación entre testimonios */
     text-align: center;
 }
 
@@ -54,9 +55,9 @@
 
 .testimonio-card {
     background: white;
-    padding: 25px;
+    padding: 30px; /* 🔹 Más espacio interno */
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -68,14 +69,20 @@
     transform: translateY(0);
 }
 
+/* Hover con efecto de elevación */
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* =============================== */
 /* ESTRELLAS */
 /* =============================== */
 
 .testimonio-stars {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #FFD700;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* 🔹 Más separación debajo de las estrellas */
 }
 
 /* =============================== */
@@ -83,10 +90,10 @@
 /* =============================== */
 
 .testimonio-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #555;
     font-style: italic;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* 🔹 Más separación debajo del texto */
 }
 
 /* =============================== */
@@ -94,7 +101,7 @@
 /* =============================== */
 
 .testimonio-nombre {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #222;
 }
@@ -106,6 +113,7 @@
 @media (max-width: 900px) {
     .testimonios-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
@@ -115,10 +123,10 @@
     }
 
     .testimonio-text {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .testimonio-nombre {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }

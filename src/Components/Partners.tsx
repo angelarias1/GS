@@ -38,25 +38,28 @@ const Partners: React.FC = () => {
           Colaboramos con los líderes en tecnología para ofrecerte la mejor seguridad.
         </p>
 
-        {/* Primera fila (movimiento a la derecha) */}
-        <div className="partners-slider partners-slider-derecha">
-          <div className="partners-slide-track">
-            {partnersFila1.concat(partnersFila1).map((logo, index) => (
-              <div key={index} className="partners-slide">
-                <img src={logo} alt={`Partner ${index + 1}`} />
-              </div>
-            ))}
+        {/* Contenedor de dos filas */}
+        <div className="partners-slide-wrapper">
+          {/* Primera fila (movimiento a la derecha) */}
+          <div className="partners-slider partners-slider-derecha">
+            <div className="partners-slide-track">
+              {partnersFila1.concat(partnersFila1).map((logo, index) => (
+                <div key={index} className="partners-slide">
+                  <img src={logo} alt={`Partner ${index + 1}`} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Segunda fila (movimiento a la izquierda) */}
-        <div className="partners-slider partners-slider-izquierda">
-          <div className="partners-slide-track">
-            {partnersFila2.concat(partnersFila2).map((logo, index) => (
-              <div key={index} className="partners-slide">
-                <img src={logo} alt={`Partner ${index + 13}`} />
-              </div>
-            ))}
+          {/* Segunda fila (movimiento a la izquierda) */}
+          <div className="partners-slider partners-slider-izquierda">
+            <div className="partners-slide-track">
+              {partnersFila2.concat(partnersFila2).map((logo, index) => (
+                <div key={index} className="partners-slide">
+                  <img src={logo} alt={`Partner ${index + 13}`} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
