@@ -11,28 +11,32 @@
 }
 
 .productos-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #222;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
 .productos-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 /* Estructura de los productos */
 .producto-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
@@ -43,7 +47,7 @@
 
 .producto-texto {
     flex: 1;
-    text-align: left;
+    text-align: justify;
     max-width: 40%;
 }
 
@@ -52,12 +56,14 @@
     font-weight: bold;
     margin-bottom: 5px;
     color: #222;
+    text-align: justify;
 }
 
 .producto-texto p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 /* Lista de detalles */
@@ -73,6 +79,7 @@
     margin-bottom: 5px;
     display: flex;
     align-items: center;
+    text-align: justify;
 }
 
 /* Botón Azul */
@@ -99,12 +106,14 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     max-width: 50%;
 }
 
 .producto-imagen img {
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
+    height: auto;
     border-radius: 10px;
     filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -115,47 +124,6 @@
     filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.2));
 }
 
-/* ===================== NUEVA SECCIÓN: TIPOS DE CÁMARAS ===================== */
-.tipos-camaras-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.tipo-camara-card {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tipo-camara-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.tipo-camara-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 12px;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.15));
-}
-
-.tipo-camara-nombre {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #222;
-}
-
-.tipo-camara-descripcion {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 10px;
-}
-
 /* RESPONSIVIDAD */
 @media (max-width: 900px) {
     .producto-item {
@@ -164,16 +132,17 @@
     }
 
     .producto-texto {
-        text-align: center;
+        text-align: justify;
         max-width: 100%;
+    }
+
+    .producto-imagen {
+        max-width: 70%;
+        margin: 0 auto;
     }
 
     .producto-boton {
         display: inline-block;
-    }
-
-    .producto-imagen {
-        max-width: 80%;
     }
 
     .tipos-camaras-grid {
@@ -182,6 +151,10 @@
 }
 
 @media (max-width: 600px) {
+    .producto-imagen {
+        max-width: 90%;
+    }
+
     .tipos-camaras-grid {
         grid-template-columns: repeat(1, 1fr);
     }

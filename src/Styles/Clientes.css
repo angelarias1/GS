@@ -82,12 +82,12 @@
 
 /* Fila superior (movimiento a la derecha) */
 .clientes-slider-derecha .clientes-slide-track {
-  animation: slideRight 10s linear infinite;
+  animation: slideRight 12s linear infinite;
 }
 
 /* Fila inferior (movimiento a la izquierda) */
 .clientes-slider-izquierda .clientes-slide-track {
-  animation: slideLeft 10s linear infinite;
+  animation: slideLeft 12s linear infinite;
 }
 
 /* Animación fila derecha */

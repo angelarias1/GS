@@ -23,7 +23,7 @@ const Sectores: React.FC = () => {
         <section className="sectores" id="sectores">
             <div className="sectores-container">
                 <h2 className="sectores-title">Soluciones de Videovigilancia por Sector</h2>
-                <p className="sectores-subtitle">Protección avanzada adaptada a cada tipo de industria.</p>
+                <p className="sectores-subtitle">Brindamos protección avanzada adaptada a cada tipo de industria.</p>
 
                 <div className="sectores-grid">
                     {sectores.map((sector, index) => (

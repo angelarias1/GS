@@ -89,12 +89,12 @@
 
 /* 🎥 Movimiento de derecha a izquierda */
 .partners-slider-derecha .partners-slide-track {
-  animation: slideRight 8s linear infinite;
+  animation: slideRight 13s linear infinite;
 }
 
 /* 🎥 Movimiento de izquierda a derecha */
 .partners-slider-izquierda .partners-slide-track {
-  animation: slideLeft 8s linear infinite;
+  animation: slideLeft 13s linear infinite;
 }
 
 /* 🚀 Ajustando la velocidad para que se vea más fluido */

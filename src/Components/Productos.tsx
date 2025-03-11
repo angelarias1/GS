@@ -1,82 +1,89 @@
 import React from 'react';
 import '../Styles/Productos.css';
 
-// Imágenes de los productos 
-import camara1 from '../assets/images/cam.webp';
-import camara2 from '../assets/images/camara2.webp';
-import camara3 from '../assets/images/camara3.webp';
-import camara4 from '../assets/images/camara4.webp';
-
-// Imágenes de los tipos de cámaras
-import tipo1 from '../assets/images/camarazoom.webp';
-import tipo2 from '../assets/images/camaranocturnaa.webp';
-import tipo3 from '../assets/images/camaramovimiento.webp';
-import tipo4 from '../assets/images/camaraseguimiemto.webp'; // Corrección
-import tipo5 from '../assets/images/camaraaudio.webp';
-import tipo6 from '../assets/images/camarafacial.webp';
+// Imágenes de las cámaras (Asegúrate de tener las imágenes correctas)
+import interiores from '../assets/images/interores.png';
+import exteriores from '../assets/images/exteriores.png';
+import movimiento from '../assets/images/movimiento.png';
+import wifi from '../assets/images/wifi.png';
+import ojopez from '../assets/images/ojo de pez.png';
+import visionnocturna from '../assets/images/nocturnas.png';
 
 const productos = [
     {
-        nombre: " Domo Turret",
-        descripcion: "Cámara de seguridad  con resolución HD y visión nocturna.",
-        imagen: camara1,
+        nombre: "Cámaras para Interiores",
+        descripcion: "Diseñadas para brindar seguridad en espacios cerrados como casas, oficinas y negocios. Son compactas, discretas y ofrecen imágenes nítidas para monitorear cada detalle sin alterar la estética del lugar.",
+        imagen: interiores,
         detalles: [
-            "✅ Resolución HD 1080p con visión nocturna avanzada.",
-            "✅ Lente fijo de alto rendimiento con amplio ángulo de visión.",
-            "✅ Diseño resistente a condiciones climáticas.",
-            "✅ Detección inteligente de movimiento."
+            "✅ Diseño discreto y compacto.",
+            "✅ Imágenes en alta definición.",
+            "✅ Fácil instalación en techos y paredes.",
+            "✅ Monitoreo en tiempo real desde dispositivos móviles.",
         ]
     },
     {
-        nombre: " Bullet Dual",
-        descripcion: "Doble lente para un monitoreo de seguridad con mayor detalle.",
-        imagen: camara2,
+        nombre: "Cámaras para Exteriores",
+        descripcion: "Resistentes a la intemperie y con visión de amplio alcance. Ideales para patios, estacionamientos y entradas. Capturan imágenes en alta calidad incluso bajo condiciones climáticas adversas.",
+        imagen: exteriores,
         detalles: [
-            "✅ Tecnología de doble lente para mejor profundidad de imagen.",
-            "✅ Visión nocturna mejorada con infrarrojos de largo alcance.",
-            "✅ Grabación en la nube con acceso remoto.",
-            "✅ Resistente a golpes y condiciones extremas."
+            "✅ Protección contra lluvia, polvo y sol.",
+            "✅ Visión de largo alcance en exteriores.",
+            "✅ Opciones con detección de movimiento.",
+            "✅ Ideal para entradas, patios y estacionamientos.",
         ]
     },
     {
-        nombre: " Bullet Pro",
-        descripcion: "Zoom óptico y grabación en 4K para máxima seguridad.",
-        imagen: camara3,
+        nombre: "Cámaras con Movimiento PTZ",
+        descripcion: "Controla el ángulo de visión y el zoom a distancia. Perfectas para monitorear grandes áreas con un solo equipo, permitiendo seguir personas u objetos en tiempo real y eliminando puntos ciegos.",
+        imagen: movimiento,
         detalles: [
-            "✅ Zoom óptico de hasta 30x con enfoque automático.",
-            "✅ Sistema de detección de intrusos con IA.",
-            "✅ Grabación en 4K con claridad ultra HD.",
-            "✅ Configuración avanzada de alertas personalizadas."
+            "✅ Movimiento horizontal y vertical con zoom.",
+            "✅ Seguimiento automático de objetos en movimiento.",
+            "✅ Ideal para vigilar grandes espacios.",
+            "✅ Compatible con sistemas de seguridad avanzados.",
         ]
     },
     {
-        nombre: " Domo IR",
-        descripcion: "Infrarrojos y detección térmica para vigilancia 24/7.",
-        imagen: camara4,
+        nombre: "Cámaras WiFi",
+        descripcion: "Conéctalas sin cables y accede a las imágenes desde tu celular en cualquier momento. Son fáciles de instalar y permiten un monitoreo remoto sin complicaciones, ideal para hogares y negocios en expansión.",
+        imagen: wifi,
         detalles: [
-            "✅ Detección térmica avanzada para vigilancia nocturna total.",
-            "✅ Sensor de imagen de última generación con baja latencia.",
-            "✅ Compatible con sistemas de alarma y domótica.",
-            "✅ Control de acceso remoto desde cualquier dispositivo."
+            "✅ Conexión sin cables para mayor flexibilidad.",
+            "✅ Acceso en tiempo real desde dispositivos móviles.",
+            "✅ Instalación sencilla sin necesidad de técnicos.",
+            "✅ Opciones con batería recargable y almacenamiento en la nube.",
         ]
     },
-];
-
-const tiposCamaras = [
-    { nombre: "Cámaras con Movimiento y Zoom", descripcion: "Permiten ajustar el ángulo de visión y hacer zoom.", imagen: tipo1 },
-    { nombre: "Cámaras con Visión Nocturna", descripcion: "Capturan imágenes claras en total oscuridad con IR.", imagen: tipo2 },
-    { nombre: "Cámaras con Detección de Movimiento", descripcion: "Activan grabación al detectar actividad.", imagen: tipo3 },
-    { nombre: "Cámaras con Seguimiento de Objetos", descripcion: "Identifican y siguen personas o vehículos.", imagen: tipo4 },
-    { nombre: "Cámaras con Audio Bidireccional", descripcion: "Incluyen micrófono y altavoz para comunicación.", imagen: tipo5 },
-    { nombre: "Cámaras con Reconocimiento Facial", descripcion: "Identifican rostros en tiempo real.", imagen: tipo6 },
+    {
+        nombre: "Cámaras Panoramicas",
+        descripcion: "Captura una vista panorámica de 360° con una sola cámara. Su lente especial cubre áreas amplias sin necesidad de múltiples dispositivos, ideal para tiendas, oficinas y espacios abiertos.",
+        imagen: ojopez,
+        detalles: [
+            "✅ Visión de 360° sin puntos ciegos.",
+            "✅ Reduce la cantidad de cámaras necesarias en un área.",
+            "✅ Monitoreo en tiempo real y grabaciones en alta definición.",
+            "✅ Compatible con aplicaciones móviles para visualización remota.",
+        ]
+    },
+    {
+        nombre: "Cámaras con Visión Nocturna",
+        descripcion: "Seguridad garantizada las 24 horas con imágenes claras incluso en total oscuridad. Su tecnología de infrarrojos permite detectar movimientos y personas sin necesidad de luz.",
+        imagen: visionnocturna,
+        detalles: [
+            "✅ Captura imágenes claras incluso en total oscuridad.",
+            "✅ Tecnología de infrarrojos para mejor visibilidad nocturna.",
+            "✅ Detección de movimiento para alertas automáticas.",
+            "✅ Ideal para vigilancia nocturna en interiores y exteriores.",
+        ]
+    },
 ];
 
 const Productos: React.FC = () => {
     return (
         <section className="productos" id="productos">
-            <div className="productos-container" aria-label="Lista de cámaras ">
-                <h2 className="productos-title"> Seguridad Avanzada</h2>
-                <p className="productos-subtitle">Explora nuestras soluciones de videovigilancia con tecnología de punta.</p>
+            <div className="productos-container" aria-label="Lista de cámaras">
+                <h2 className="productos-title">CÁMARAS DE SEGURIDAD PARA CADA NECESIDAD</h2>
+                <p className="productos-subtitle">Contamos con soluciones diseñadas para adaptarse a tu entorno, con tecnología de videovigilancia que se ajusta a cada necesidad y espacio.</p>
 
                 {productos.map((producto, index) => (
                     <article key={index} className={`producto-item ${index % 2 === 0 ? 'invertido' : ''}`}>
@@ -94,19 +101,6 @@ const Productos: React.FC = () => {
                         </div>
                     </article>
                 ))}
-
-                <h2 className="productos-title">Tipos de Cámaras de Seguridad</h2>
-                <p className="productos-subtitle">Diferentes tecnologías adaptadas a cada necesidad.</p>
-
-                <div className="tipos-camaras-grid">
-                    {tiposCamaras.map((tipo, index) => (
-                        <article key={index} className="tipo-camara-card">
-                            <img src={tipo.imagen} alt={tipo.nombre} className="tipo-camara-img" loading="lazy" decoding="async" />
-                            <h3 className="tipo-camara-nombre">{tipo.nombre}</h3>
-                            <p className="tipo-camara-descripcion">{tipo.descripcion}</p>
-                        </article>
-                    ))}
-                </div>
             </div>
         </section>
     );

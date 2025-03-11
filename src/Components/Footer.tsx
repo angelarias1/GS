@@ -1,6 +1,9 @@
 import React from 'react';
 import '../Styles/Footer.css';
 import LogoImg from '../assets/images/image.webp'; // Logo
+import UbicacionIcon from '../assets/images/ubicacion.png'; // Icono de ubicación
+import TelefonoIcon from '../assets/images/telefono.png'; // Icono de teléfono
+import CorreoIcon from '../assets/images/correo.png'; // Icono de correo
 
 const Footer: React.FC = () => {
     return (
@@ -38,9 +41,22 @@ const Footer: React.FC = () => {
                 {/* COLUMNA DERECHA - CONTACTO */}
                 <div className="footer-contact">
                     <h3>Contacto</h3>
-                    <p>📍 Cancún, Quintana Roo</p>
-                    <p>📧 <a href="mailto:ventas@gruposaom.com.mx">ventas@gruposaom.com.mx</a></p>
-                    <p>📞 <a href="tel:+529989148930">+52 998 914 8930</a></p>
+                    <div className="contacto-item">
+                        <img src={UbicacionIcon} alt="Ubicación" className="contacto-icon" />
+                        <p>Cancún, Quintana Roo</p>
+                    </div>
+                    <div className="contacto-item">
+                        <img src={CorreoIcon} alt="Correo" className="contacto-icon" />
+                        <p>
+                            <a href="mailto:ventas@gruposaom.com.mx">ventas@gruposaom.com.mx</a>
+                        </p>
+                    </div>
+                    <div className="contacto-item">
+                        <img src={TelefonoIcon} alt="Teléfono" className="contacto-icon" />
+                        <p>
+                            <a href="tel:+529989148930">+52 998 914 8930</a>
+                        </p>
+                    </div>
                 </div>
             </div>
 

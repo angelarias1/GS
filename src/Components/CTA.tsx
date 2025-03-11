@@ -17,7 +17,7 @@ const CTA: React.FC = () => {
                     <a href={whatsappLink} target="_blank" rel="nofollow noopener noreferrer" className="cta-button whatsapp">
                         Contactar por WhatsApp
                     </a>
-                    <a href="#contacto" className="cta-button secondary">
+                    <a href={whatsappLink} target="_blank" rel="nofollow noopener noreferrer" className="cta-button secondary">
                         Solicitar Cotización
                     </a>
                 </div>

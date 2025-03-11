@@ -6,21 +6,23 @@ export default defineConfig({
   plugins: [react()],
   build: {
     sourcemap: false, // 🔹 Evita archivos extra en producción
-    minify: 'esbuild', // 🔹 Minificación de código para reducir el peso
+    reportCompressedSize: false, // ✅ Nueva opción en lugar de brotliSize
+    minify: 'esbuild', // 🔹 Minificación rápida con esbuild
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom'], // 🔹 Separa React en un chunk independiente
-          vendors: ['axios'], // 🔹 Agrupa otras librerías en un chunk aparte
+          react: ['react', 'react-dom'], // 🔹 Divide React en un chunk separado
+          vendors: ['axios'], // 🔹 Mueve librerías externas a otro chunk
         },
       },
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom'], // 🔹 Asegura que React se optimiza antes
+    include: ['react', 'react-dom'], // 🔹 Preoptimiza React
   },
   server: {
-    host: true, // 🔹 Permite acceder al servidor desde LAN
-    port: 5173, // 🔹 Define el puerto del servidor de desarrollo
+    host: '0.0.0.0', // 🔹 Permite acceder desde LAN
+    port: 5173, // 🔹 Define el puerto de desarrollo
+    strictPort: true, // 🔹 Asegura que siempre use este puerto
   },
 })

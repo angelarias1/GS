@@ -94,7 +94,9 @@
 
 /* EFECTO EN HOVER */
 .sector-card:hover .sector-overlay {
-    background: rgba(0, 0, 0, 0.224);
+    background: rgba(45, 45, 45, 0.005);
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 🔹 Sombra oscura para resaltar el texto */
 }
 
 /* TEXTOS */

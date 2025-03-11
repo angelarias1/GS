@@ -2,8 +2,8 @@ import React from 'react';
 import '../Styles/Beneficios.css';
 
 // Importar imágenes de fondo para cada beneficio
-import img1 from '../assets/images/monitooreo.webp';
-import img2 from '../assets/images/detecion.webp';
+import img1 from '../assets/images/vanguardia.webp';
+import img2 from '../assets/images/inteligente.webp';
 import img3 from '../assets/images/monitoreo.webp';
 import img4 from '../assets/images/soporte.webp';
 
@@ -24,8 +24,8 @@ const beneficios = [
         imagenFondo: img3,
     },
     {
-        titulo: "Instalación Profesional",
-        descripcion: "Expertos en videovigilancia para garantizar máxima seguridad y eficiencia.",
+        titulo: "Soporte y garantía",
+        descripcion: "Contamos con un equipo especializado para instalación, mantenimiento y asistencia técnica cuando lo necesites.",
         imagenFondo: img4,
     },
 ];

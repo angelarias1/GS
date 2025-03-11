@@ -24,13 +24,13 @@ const App: React.FC = () => {
             <main>
                 <section id="beneficios"><Beneficios /></section>
                 <section id="sectores"><Sectores /></section>
-                <section id="clientes"><Clientes /></section>
                 {/* <section id="soluciones"><Soluciones /></section> */}
                 <section id="productos"><Productos /></section>
+                <section id="partners"><Partners /></section>
                 <section id="cta"><CTA /></section>
                 <section id="estadisticas"><Estadisticas /></section>
+                <section id="clientes"><Clientes /></section>
                 <section id="testimonios"><Testimonios /></section>
-                <section id="partners"><Partners /></section>
                 <section id="faq"><FAQ /></section>
             </main>
 
