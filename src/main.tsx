@@ -1,10 +1,10 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css'; // ✅ Reagregado
-import App from './App.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { CarritoProvider } from "./context/CarritoContext"; // ✅ Importa el proveedor del carrito
+import "./index.css";
+import App from "./App.tsx";
 
-// ✅ Asegura que el elemento root existe antes de renderizar
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 if (!rootElement) {
   throw new Error("No se encontró el elemento #root en el DOM");
@@ -12,9 +12,10 @@ if (!rootElement) {
 
 const root = createRoot(rootElement);
 
-// ✅ Usa `hydrateRoot` si usas SSR, o `createRoot` si es CSR
 root.render(
   <StrictMode>
-    <App />
+    <CarritoProvider> {/* ✅ Envolver toda la aplicación con el proveedor */}
+      <App />
+    </CarritoProvider>
   </StrictMode>
 );

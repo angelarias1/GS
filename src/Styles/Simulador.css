@@ -1,0 +1,237 @@
+/* =============================== */
+/* CONTENEDOR GENERAL */
+/* =============================== */
+.simulador-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =============================== */
+/* MENSAJES DE ERROR Y CARGA */
+/* =============================== */
+.message {
+    font-size: 18px;
+    color: #555;
+}
+
+.message.error {
+    color: red;
+}
+
+/* =============================== */
+/* CONTENEDOR DEL FILTRO Y CARRITO */
+/* =============================== */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* =============================== */
+/* FILTRO DE CATEGORÍAS */
+/* =============================== */
+.filter-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    max-width: 350px; /* 🔹 Limita el ancho del filtro */
+}
+
+.filter-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.filter-container select {
+    font-size: 1rem;
+    padding: 6px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.filter-container select:hover {
+    background: #e9ecef;
+}
+
+/* =============================== */
+/* BOTÓN DEL CARRITO */
+/* =============================== */
+.cart-button {
+    display: flex;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-button:hover {
+    background: #0056b3;
+}
+
+/* Indicador de cantidad */
+.cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+/* =============================== */
+/* GRID DE PRODUCTOS */
+/* =============================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* =============================== */
+/* CARD DE PRODUCTOS */
+/* =============================== */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================== */
+/* IMÁGENES */
+/* =============================== */
+.product-image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* =============================== */
+/* ETIQUETA DE CATEGORÍA */
+/* =============================== */
+.category-tag {
+    background-color: #3B82F6;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+}
+
+/* =============================== */
+/* BOTÓN Y CANTIDAD */
+/* =============================== */
+.actions {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.qty-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+/* =============================== */
+/* BOTÓN DE AGREGAR */
+/* =============================== */
+.add-button {
+    background: #28a745;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-button:hover {
+    background: #218838;
+}
+
+/* =============================== */
+/* RESPONSIVE: AJUSTES PARA PANTALLAS PEQUEÑAS */
+/* =============================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cart-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

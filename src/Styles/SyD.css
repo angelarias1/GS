@@ -1,0 +1,68 @@
+.syd-container {
+    width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.syd-selection h2 {
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.syd-selection p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.syd-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.syd-buttons button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-simulador {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn-simulador:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.btn-diagnostico {
+    background: #28a745;
+    color: white;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-diagnostico:hover {
+    background: #1e7e34;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .syd-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,223 @@
+/* =============================== */
+/* CONTENEDOR GENERAL DEL CARRITO */
+/* =============================== */
+.simulador-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =============================== */
+/* ESTILOS PARA EL TÍTULO */
+/* =============================== */
+.simulador-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* =============================== */
+/* GRID DE PRODUCTOS */
+/* =============================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* =============================== */
+/* CARD DE PRODUCTOS */
+/* =============================== */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================== */
+/* IMAGEN DEL PRODUCTO */
+/* =============================== */
+.product-image-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* =============================== */
+/* CATEGORÍA DEL PRODUCTO */
+/* =============================== */
+.category-tag {
+    background-color: #3B82F6;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+}
+
+/* =============================== */
+/* SECCIÓN DE ACCIONES (CANTIDAD Y ELIMINAR) */
+/* =============================== */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+/* =============================== */
+/* BOTONES DE QTY */
+/* =============================== */
+.qty-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.qty-button:hover {
+    background: #0056b3;
+}
+
+/* =============================== */
+/* INPUT DE CANTIDAD */
+/* =============================== */
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+/* =============================== */
+/* BOTÓN DE ELIMINAR */
+/* =============================== */
+.delete-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+/* =============================== */
+/* BOTÓN PARA VACIAR CARRITO */
+/* =============================== */
+.vaciar-button {
+    margin-top: 20px;
+    background: #ffc107;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.vaciar-button:hover {
+    background: #e0a800;
+}
+/* =============================== */
+/* BOTÓN PARA GUARDAR PDF */
+/* =============================== */
+.guardar-button {
+    margin-top: 20px;
+    background: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.guardar-button:hover {
+    background: #138496;
+}
+
+/* =============================== */
+/* CONTENEDOR DE BOTONES */
+/* =============================== */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* =============================== */
+/* BOTÓN DE GUARDAR IMAGEN */
+/* =============================== */
+.guardar-button {
+    margin-top: 20px;
+    margin-left: 10px;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.guardar-button:hover {
+    background: #0056b3;
+}
+
+/* =============================== */
+/* CONTENEDOR DE BOTONES */
+/* =============================== */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}

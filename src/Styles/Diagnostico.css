@@ -1,0 +1,108 @@
+.diagnostico-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.diagnostico-container h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.diagnostico-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background: #e9ecef;
+}
+
+.diagnostico-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.pregunta {
+    margin-bottom: 15px;
+}
+
+.pregunta input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.pregunta input:focus {
+    border-color: #007bff;
+    background: white;
+    outline: none;
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-enviar:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .diagnostico-container {
+        padding: 15px;
+    }
+
+    .diagnostico-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .diagnostico-container p {
+        font-size: 1rem;
+    }
+
+    .btn-enviar {
+        font-size: 1rem;
+    }
+}
